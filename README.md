@@ -2,9 +2,9 @@
 A simple calendar widget written in ES6
 
 
-The widget is initiated by calling the "constructor" function. 
 
-It accepts an optional "config" object through which it can be customized. For example:
+The widget is initiated by calling the "constructor" function. It accepts an optional "config" object through which it can be customized. For example:
+
 
 config.fn --> callback function
 config.element --> an element reference
