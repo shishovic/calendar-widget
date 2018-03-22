@@ -1,0 +1,125 @@
+* {
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Main widget container */
+#calendar {
+    display: block;
+    width: 500px;
+    height: 750px;
+    margin: 100px auto 0px auto;
+    background-color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+
+#calendar .year {
+    height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+#calendar .year .year-label,
+#calendar .month .month-label,
+#calendar .day-label,
+#calendar .day-label > div {
+    height: 50px;
+    line-height: 50px;
+}
+
+#calendar .month {
+    height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+#calendar .weeks {
+    height: 500px;
+}
+
+#calendar .year button,
+#calendar .month button {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    cursor: pointer;
+    border: 0;
+    background-color: #fff;
+}
+
+#calendar .year button:hover,
+#calendar .month button:hover {
+    background-color: #33669988;
+    color: #fff;
+}
+
+#calendar .year .year-back,
+#calendar .month .month-back {
+    left: 0;
+    top: 0;
+}
+
+#calendar .year .year-next,
+#calendar .month .month-next {
+    right: 0;
+    top: 0;
+}
+
+#calendar .week-label {
+    width: 100%;
+}
+
+#calendar .day-label {
+    width: 100%;
+    border-bottom: 2px solid #33669988;
+}
+
+#calendar .day-label > div {
+    display: inline-block;
+    position: relative;
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+#calendar .weeks .day-wrapper {
+    width: calc(100% / 7);
+    height: calc(100% / 5);
+    display: inline-block;
+    position: relative;
+}
+
+#calendar .weeks .day-wrapper.previous {
+    color: lightgray;
+}
+
+#calendar .weeks .day-wrapper.active {
+    background-color: #33929988;
+    color: #fff;
+}
+
+#calendar .weeks .day-wrapper.selected {
+    background-color: #336699;
+    color: #fff;
+}
+
+#calendar .weeks .day-wrapper:not(.active):hover {
+    background-color: #33669988;
+    color: #fff;
+    cursor: pointer;
+}
+
+#calendar .weeks .day-wrapper .day {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
